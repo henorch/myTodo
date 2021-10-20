@@ -1,0 +1,18 @@
+.main {
+  width: 60%;
+  margin: 2px;
+  padding-top: -30px;
+  justify-content: center;
+  align-items: center;
+}
+.row {
+  width: 98%;
+  padding: 5px;
+  height: 40px;
+  margin-bottom: 2px;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  background-color: aquamarine;
+}

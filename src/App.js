@@ -1,24 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import FormEnt from './Components/FormEntry/FormEnt';
+import FormDis from './Components/FormDisplay/FormDis';
 
 function App() {
+  const [todoList, setTodoList] = ([{
+    title:'my expectation',
+    description:'To finanlize my expectation very soon'
+  }]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+<div className="App">
+  
+<h1>My Todo Application</h1>
+  <div style={{
+    display:'flex',
+    flexDirection:'row',
+    justifyContent:'space-around'
+  }}>
+<FormEnt/>
+<FormDis TodoItem={todoList}/>
+</div>
+</div>
+
+    
+      </>
   );
 }
 
