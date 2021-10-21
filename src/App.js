@@ -13,11 +13,7 @@ function App() {
 <div className="App">
   
 <h1>My Todo Application</h1>
-  <div style={{
-    display:'flex',
-    flexDirection:'row',
-    justifyContent:'space-around'
-  }}>
+  <div  className='mainContainer'>
 <FormEnt/>
 <FormDis TodoItem={todoList}/>
 </div>

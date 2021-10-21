@@ -1,5 +1,5 @@
 .main {
-  width: 60%;
+  width: 100%;
   margin: 2px;
   padding-top: -30px;
   justify-content: center;
@@ -14,5 +14,10 @@
   flex-direction: row;
   display: flex;
   justify-content: space-between;
-  background-color: aquamarine;
+}
+
+@media only screen and(max-width: 600px ) {
+  .main {
+    width: 100%;
+  }
 }

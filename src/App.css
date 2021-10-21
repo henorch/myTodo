@@ -1,5 +1,16 @@
 .App {
   text-align: center;
+  padding: 4px;
+}
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: "space-around";
+}
+@media only screen and (max-width: 600px) {
+  .mainContainer {
+    flex-direction: column;
+  }
 }
 
 .App-logo {
