@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { useDispatch } from 'react-redux';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 
 
@@ -18,6 +19,9 @@ const DisplayRow = ({id, title, description}) => {
         dispatch(removeTodo({id:id}))
     }   
     return(
+        <CSSTransition
+        classNames='fade-appear'
+        timeout={500}>
         <div className='row' key={id}>
             
             <h4>{title}</h4>
@@ -30,6 +34,7 @@ const DisplayRow = ({id, title, description}) => {
             <FontAwesomeIcon onClick={RemoveTodo} icon={faTrash} style={{ margin:10}}  size='lg' />
             </div>
         </div>
+        </CSSTransition>
     )
 }
 
@@ -38,6 +43,7 @@ function NoList(){
         <div style={{
             justifyContent:'center',
             alignItems:'center',
+            alignSelf:'center'
             
         }}>
             <h3>You have no Item in your Todo List</h3>
@@ -58,15 +64,16 @@ function FormDis(props) {
     console.log(todoItems);
     return (
         <div className='main'>
-            
+            <TransitionGroup>
                 {todoItems.length == 0 ? <NoList/> : <div>
             {todoItems.map((todoItem) => <DisplayRow id={todoItem.id}
                 id={todoItem.id} title={todoItem.title} description={todoItem.description}/>
                 )
             }
+            
              </div>
         }
-               
+              </TransitionGroup> 
         </div>
     );
 }

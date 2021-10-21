@@ -2,14 +2,25 @@
   text-align: center;
   padding: 4px;
 }
+
 .mainContainer {
   display: flex;
   flex-direction: row;
   justify-content: "space-around";
 }
+
+.addbtn {
+  display: none;
+}
 @media only screen and (max-width: 600px) {
   .mainContainer {
     flex-direction: column;
+  }
+  .ent {
+    display: none;
+  }
+  .addbtn {
+    display: block;
   }
 }
 

@@ -1,21 +1,34 @@
 import logo from './logo.svg';
+import { useSelector } from 'react-redux';
 import './App.css';
 import FormEnt from './Components/FormEntry/FormEnt';
 import FormDis from './Components/FormDisplay/FormDis';
 
 function App() {
-  const [todoList, setTodoList] = ([{
-    title:'my expectation',
-    description:'To finanlize my expectation very soon'
-  }]);
+  const count = useSelector(state => state.display)
+  const totalTodo = count.length;
   return (
     <>
 <div className="App">
   
-<h1>My Todo Application</h1>
+<div style={{background:'green',
+justifyContent:'space-between'}}><b style={{fontWeight:'bolder',
+fontSize:'1.5em'}}>My Todo Application</b>
+<span style={{color:'#fff', 
+marginLeft:50,
+fontSize:'4em'}}>{totalTodo}</span> Todos
+</div>
   <div  className='mainContainer'>
+    <div className='ent'>
 <FormEnt/>
-<FormDis TodoItem={todoList}/>
+</div>
+<button  className='addbtn'style={{position:'absolute',
+width:80,
+height:80,
+borderRadius:'50%',
+bottom:5,
+right:5}} >Add</button>
+<FormDis/>
 </div>
 </div>
 

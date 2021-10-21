@@ -1,23 +1,25 @@
 .main {
   width: 100%;
-  margin: 2px;
+  align-self: flex-end;
+  margin: 2px auto;
   padding-top: -30px;
   justify-content: center;
   align-items: center;
 }
+@media only screen and(max-width: 600px ) {
+  .main {
+    width: 100%;
+  }
+}
 .row {
   width: 98%;
   padding: 5px;
+  background-color: aquamarine;
   height: 40px;
+  border-radius: 5%;
   margin-bottom: 2px;
   align-items: center;
   flex-direction: row;
   display: flex;
   justify-content: space-between;
-}
-
-@media only screen and(max-width: 600px ) {
-  .main {
-    width: 100%;
-  }
 }
