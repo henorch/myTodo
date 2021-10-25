@@ -2,7 +2,9 @@
   text-align: center;
   padding: 4px;
 }
-
+.modal {
+  display: none;
+}
 .mainContainer {
   display: flex;
   flex-direction: row;
@@ -20,6 +22,9 @@
     display: none;
   }
   .addbtn {
+    display: block;
+  }
+  .modal {
     display: block;
   }
 }

@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addTodo, removeTodo } from '../FormDisplay/DisplaySlice';
+import { addTodo } from '../FormDisplay/DisplaySlice';
 
 import './formEntry.css'
-
 
 
 
@@ -25,16 +24,8 @@ function FormEnt({id}) {
         dispatch(addTodo({...formEntry}))
     }
 
-    const remove = () =>{
-        dispatch(removeTodo({id: id}))
-    }
 
-   // const getValue = e => {
-   //     setFormEntry({
-   //         ...formEntry,
-   //         [e.target.name] : e.target.value
-   //     })
-   // }
+  
 
     return (
         <form onSubmit={submit}>
@@ -61,6 +52,7 @@ function FormEnt({id}) {
                     })}
                     placeholder='description'/>
                 </div>
+
                 <button>Submit</button>
         </div>
         </form>

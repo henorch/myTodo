@@ -9,10 +9,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 
 
-const Button = (props) => {
-    return <button
-     value='Create New Item'/>
-}
+
 const DisplayRow = ({id, title, description}) => {
     const RemoveTodo = () =>{
        const dispatch = useDispatch();
@@ -65,7 +62,7 @@ function FormDis(props) {
     return (
         <div className='main'>
             <TransitionGroup>
-                {todoItems.length == 0 ? <NoList/> : <div>
+                {todoItems.length === 0 ? <NoList/> : <div>
             {todoItems.map((todoItem) => <DisplayRow id={todoItem.id}
                 id={todoItem.id} title={todoItem.title} description={todoItem.description}/>
                 )
