@@ -2,9 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Connection to Database
-ensure you connect to database,mongo atlass was used for testing during app development.
-
 ## Available Scripts
 
 In the project directory, you can run:
